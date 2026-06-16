@@ -40,7 +40,8 @@ const VOICES = {
 };
 
 // ===== Edge TTS 服务端 API =====
-const TTS_API_URL = '/api/tts';
+// const TTS_API_URL = '/api/tts';
+const TTS_API_URL = 'https://tts.tzz.ccwu.cc/tts/v1/audio/speech';
 
 // ===== 限制配置 =====
 const MAX_TEXT_LENGTH = 1000;
