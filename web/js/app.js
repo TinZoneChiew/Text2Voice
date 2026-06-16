@@ -181,9 +181,9 @@ async function callEdgeTTS(text, voice, rate, pitch) {
 
     const response = await fetch(TTS_API_URL, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer Tin1030' },
         body: JSON.stringify({
-            text: text,
+            input: text,
             voice: voice,
             rate: rateStr,
             pitch: pitchStr
