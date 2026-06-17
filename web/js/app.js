@@ -175,9 +175,12 @@ function disablePlaybackButtons() {
 // ===== Edge TTS 服务端调用 =====
 async function callEdgeTTS(text, voice, rate, pitch) {
     // 将滑块值转为 edge-tts 需要的格式
-    const ratePercent = Math.round((rate - 1) * 100);
-    const rateStr = (ratePercent >= 0 ? '+' : '') + ratePercent + '%';
-    const pitchStr = (pitch >= 0 ? '+' : '') + pitch + 'Hz';
+    // const ratePercent = Math.round((rate - 1) * 100);
+    // const rateStr = (ratePercent >= 0 ? '+' : '') + ratePercent + '%';
+    // const pitchStr = (pitch >= 0 ? '+' : '') + pitch + 'Hz';
+
+    const rateStr = (rate >= 0 ? '+' : '');
+    const pitchStr = (pitch >= 0 ? '+' : '');
 
     const response = await fetch(TTS_API_URL, {
         method: 'POST',
