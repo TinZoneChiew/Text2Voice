@@ -231,7 +231,8 @@ function synthesizeWithWebSpeech(text, voice, rate, pitch) {
         }
         utterance.lang = langCode;
         utterance.rate = rate;
-        utterance.pitch = 1 + pitch / 100; // 转换为 0-2 范围
+        // utterance.pitch = 1 + pitch / 100; // 转换为 0-2 范围
+        utterance.pitch = pitch / 100; // 转换为 0-2 范围
 
         utterance.onend = function () {
             resolve(null); // Web Speech 没有 blob
