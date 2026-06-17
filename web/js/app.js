@@ -188,7 +188,7 @@ async function callEdgeTTS(text, voice, rate, pitch) {
         body: JSON.stringify({
             input: text,
             voice: voice,
-            rate: rateStr,
+            speed: rateStr,
             pitch: pitchStr
         })
     });
