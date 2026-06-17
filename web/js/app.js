@@ -179,8 +179,8 @@ async function callEdgeTTS(text, voice, rate, pitch) {
     // const rateStr = (ratePercent >= 0 ? '+' : '') + ratePercent + '%';
     // const pitchStr = (pitch >= 0 ? '+' : '') + pitch + 'Hz';
 
-    const rateStr = (rate >= 0 ? '+' : '');
-    const pitchStr = (pitch >= 0 ? '+' : '');
+    const rateStr = rate;
+    const pitchStr = pitch / 100;
 
     const response = await fetch(TTS_API_URL, {
         method: 'POST',
