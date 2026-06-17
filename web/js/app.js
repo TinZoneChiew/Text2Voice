@@ -45,7 +45,7 @@ const TTS_API_URL = 'https://tts.tzz.ccwu.cc/tts/v1/audio/speech';
 
 // ===== 限制配置 =====
 const MAX_TEXT_LENGTH = 1000;
-const MAX_REQUESTS_PER_HOUR = 10;
+const MAX_REQUESTS_PER_HOUR = 100;
 
 // ===== 全局状态 =====
 let currentAudioBlob = null;
