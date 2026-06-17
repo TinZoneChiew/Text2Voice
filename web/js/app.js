@@ -9,6 +9,16 @@ const VOICES = {
             { name: 'zh-CN-YunjianNeural', label: '云健', gender: '男' },
         ]
     },
+    'zh-HK': {
+        label: '中文(粤语)',
+        voices: [
+            { name: 'yue-CN-XiaoMinNeural', label: '晓敏', gender: '女' },
+            { name: 'yue-CN-YunSongNeural', label: '云松', gender: '男' },
+            { name: 'zh-HK-HiuMaanNeural', label: '曉曼', gender: '女' },
+            { name: 'zh-HK-WanLungNeural', label: '雲龍', gender: '男' },
+            { name: 'zh-HK-HiuGaaiNeural', label: '曉佳', gender: '女' },
+        ]
+    },
     'en-US': {
         label: '英文(美国)',
         voices: [
@@ -45,7 +55,7 @@ const TTS_API_URL = 'https://tts.tzz.ccwu.cc/tts/v1/audio/speech';
 
 // ===== 限制配置 =====
 const MAX_TEXT_LENGTH = 1000;
-const MAX_REQUESTS_PER_HOUR = 100;
+const MAX_REQUESTS_PER_HOUR = 50;
 
 // ===== 全局状态 =====
 let currentAudioBlob = null;
